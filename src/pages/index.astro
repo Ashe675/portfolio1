@@ -1,0 +1,64 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
+import SocialTag from "../components/SocialTag.astro";
+import GitHubIcon from "../components/icons/GitHubIcon.astro";
+import MailIcon from "../components/icons/MailIcon.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import CodeIcon from "../components/icons/CodeIcon.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<Layout
+  title="Portfolio de José Cerrato - Desarrollador Web"
+  description="Contrata a José Cerrato para crear tu applicación web. Dessarrollador Web. Especializado en el desarrollo de aplicaciones web fullstack."
+>
+  <main class="px-4">
+    <SectionContainer class="pt-32 pb-32">
+      <img
+        class="rounded-full ml-6 w-40 h-40 mb-8 border-2 border-white"
+        src="./photo.jpg"
+        alt="Jose photo"
+      />
+      <h1 class="text-white text-3xl lg:text-5xl font-bold flex pb-6 lg:pb-10 flex-row gap-x-4">
+        Hola! Soy José Cerrato <a
+          href="https://www.linkedin.com/in/josé-manuel-cerrato-66741a281"
+          class="flex justify-center items-center"
+          ><Badge>Disponible para trabajar</Badge></a
+        >
+      </h1>
+      <h2 class=" text-xl lg:text-2xl opacity-85 text-wrap max-w-[700px]">
+        Estudiante por egresar de la carrera <span class="text-yellow-200"
+          >Ingeniería en Sistemas</span
+        > en la UNAH. De Tegucigalpa, Honduras. Especializado en el desarrollo de
+        aplicaciones web fullstack.
+      </h2>
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialTag
+          href="https://www.linkedin.com/in/josé-manuel-cerrato-66741a281"
+        >
+          <LinkedInIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialTag>
+        <SocialTag href="https://github.com/Ashe675">
+          <GitHubIcon class="size-4 md:size-6" />
+          GitHub
+        </SocialTag>
+        <SocialTag href="mailto:josecerrato675@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+          josecerrato675@gmail.com
+        </SocialTag>
+      </nav>
+    </SectionContainer>
+    <SectionContainer id="projects">
+      <h2 class=" text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class=" size-6"/>
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+  </main>
+</Layout>

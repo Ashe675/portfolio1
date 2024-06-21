@@ -1,0 +1,94 @@
+---
+import ButtonAnchor from "./ButtonAnchor.astro";
+import ExpressIcon from "./icons/ExpressIcon.astro";
+import GitHubIcon from "./icons/GitHubIcon.astro";
+import NodeIcon from "./icons/NodeIcon.astro";
+import PostgreIcon from "./icons/PostgreIcon.astro";
+import ProjectIcon from "./icons/ProjectIcon.astro";
+import ReactIcon from "./icons/ReactIcon.astro";
+import TSIcon from "./icons/TSIcon.astro";
+import TailwindIcon from "./icons/TailwindIcon.astro";
+
+const TAGS = {
+  REACT: {
+    name: "ReactJS",
+    class: " text-[#00D8FF]",
+    icon: ReactIcon,
+  },
+  TAILWIND: {
+    name: "TailwindCSS",
+    class: " text-[#1BAEBA]",
+    icon: TailwindIcon,
+  },
+  TS: {
+    name: "TypeScript",
+    class: " text-[#3178C6]",
+    icon: TSIcon,
+  },
+  PSTGR: {
+    name: "PostgreSQL",
+    class: " text-[#336791]",
+    icon: PostgreIcon,
+  },
+  EXPRESS: {
+    name: "ExpressJS",
+    class: " text-[#FFFFFF]",
+    icon: ExpressIcon,
+  },
+  NODE: {
+    name: "NodeJS",
+    class: " text-[#57A445]",
+    icon: NodeIcon,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Adminsitrador de Productos",
+    description:
+      "Un proyecto fullstack utilizando el stack PERN donde utilizo la librería react-router-dom para manejar multiples páginas, axios para el fetching de datos y valibot para validar los tipos, el backend es una REST API donde utilicé la librería jest para realizar el testing, sequelize como ORM y swagger para documentar la API.",
+    link: "https://product-management-frontend-two.vercel.app/",
+    github: "https://github.com/Ashe675/rest_api_ts_products_frontend.git",
+    image: "/projects/productManagement.webp",
+    tags: [
+      TAGS.REACT,
+      TAGS.TS,
+      TAGS.TAILWIND,
+      TAGS.PSTGR,
+      TAGS.EXPRESS,
+      TAGS.NODE,
+    ],
+  },
+];
+---
+
+{
+  PROJECTS.map((project) => (
+    <article class=" bg-black/50 p-8 rounded-md shadow-md">
+      <h3 class=" text-2xl font-semibold text-yellow-200 mb-2">
+        {project.title}
+      </h3>
+      <img
+        src={project.image}
+        alt={`Captura de pantalla del proyecto ${project.title}`}
+        class=" rounded shadow-white/10 mb-3"
+      />
+      <ul class=" flex gap-x-2 flex-row flex-wrap justify-evenly py-3">
+        {project.tags.map((tag) => (
+          <li>
+            <span class={`rounded-full`}>
+              <tag.icon class="size-10" />
+            </span>
+          </li>
+        ))}
+      </ul>
+      <p class=" text-lg mt-2 mb-4 text-pretty">{project.description}</p>
+      <div class=" flex flex-row-reverse">
+        <ButtonAnchor tag="GitHub" url={project.github} ><GitHubIcon class="size-4 md:size-6" /></ButtonAnchor>
+        <ButtonAnchor tag="Preview" url={project.link}>
+          <ProjectIcon class="size-4 md:size-6"/>
+        </ButtonAnchor>
+      </div>
+    </article>
+  ))
+}
