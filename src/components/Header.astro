@@ -1,9 +1,94 @@
-<header class="flex justify-center items-center p-5 xl:w-[1120px] container mx-auto w-full">
-  
-  <nav class="flex flex-row lg:gap-x-40 gap-x-10 opacity-90">
-    <a href="#top" class=" hover:border-b transition">Inicio</a>
-    <a href="#about" class=" hover:border-b transition">Sobre mí</a>
-    <a href="#projects" class=" hover:border-b transition">Proyectos</a>
-    <a href="#contact" class=" hover:border-b transition">Contacto</a>
+<header
+  id="main-header"
+  class="flex justify-center items-center p-2 max-w-[320px] md:max-w-[420px] text-sm mx-auto top-2 left-0 right-0 rounded-full fixed z-50 shadow-sm transition-all"
+>
+  <nav
+    class="flex flex-row flex-wrap justify-between w-full px-3 mx-auto opacity-90"
+  >
+    <a href="#top" class="nav-link hover:text-purple-500 transition">Inicio</a>
+    <a href="#projects" class="nav-link hover:text-purple-500 transition"
+      >Proyectos</a
+    >
+    <a href="#about" class="nav-link hover:text-purple-500 transition"
+      >Sobre mí</a
+    >
+    <a
+      href="mailto:josecerrato675@gmail.com"
+      class="nav-link hover:text-purple-500 transition">Contacto</a
+    >
   </nav>
 </header>
+
+<script>
+  // Obtener el header
+  const header = document.getElementById("main-header") as HTMLElement;
+
+  // Función para verificar la posición del scroll
+  function checkScrollPosition() {
+    if (window.scrollY === 0) {
+      // Si la posición del scroll es 0, remover el fondo
+      header.classList.remove("bg-[#23052c]");
+      header.classList.remove("outline");
+      header.classList.remove("outline-1");
+    } else {
+      // Si no, agregar el fondo
+      header.classList.add("bg-[#23052c]");
+      header.classList.add("outline");
+      header.classList.add("outline-1");
+      header.classList.add("outline-white/10");
+    }
+  }
+
+  // Escuchar el evento de scroll
+  window.addEventListener("scroll", checkScrollPosition);
+
+  // Verificar la posición al cargar la página
+  checkScrollPosition();
+
+  // Obtener todos los enlaces de navegación
+  const links = document.querySelectorAll(
+    ".nav-link"
+  ) as NodeListOf<HTMLAnchorElement>;
+
+  // Función para establecer el enlace activo
+  function setActiveLink(id: string) {
+    links.forEach((link) => {
+      if (link.getAttribute("href") === `#${id}`) {
+        link.classList.add("text-purple-500");
+      } else {
+        link.classList.remove("text-purple-500");
+      }
+    });
+  }
+
+  // Crear un IntersectionObserver
+  const sections = document.querySelectorAll("section[id]");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.getAttribute("id");
+          if (sectionId) {
+            setActiveLink(sectionId);
+          }
+        }
+      });
+    },
+    { threshold: 0.7 } // Ajusta el threshold según tus necesidades
+  );
+
+  // Observar cada sección
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+
+  // Establecer el enlace activo al cargar la página
+  window.addEventListener("DOMContentLoaded", () => {
+    const currentSection = document
+      .querySelector("section[id]")
+      ?.getAttribute("id");
+    if (currentSection) {
+      setActiveLink(currentSection);
+    }
+  });
+</script>

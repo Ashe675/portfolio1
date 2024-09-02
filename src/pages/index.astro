@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Carousel from "../components/Carousel.astro";
 import Badge from "../components/Badge.astro";
 import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
 import SocialTag from "../components/SocialTag.astro";
@@ -8,7 +8,38 @@ import GitHubIcon from "../components/icons/GitHubIcon.astro";
 import MailIcon from "../components/icons/MailIcon.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import CodeIcon from "../components/icons/CodeIcon.astro";
-import Projects from "../components/Projects.astro";
+import UserIcon from "../components/icons/UserIcon.astro";
+import ReactIcon from "../components/icons/ReactIcon.astro";
+import NodeIcon from "../components/icons/NodeIcon.astro";
+import PythonIcon from "../components/icons/PythonIcon.astro";
+import DjangoIcon from "../components/icons/DjangoIcon.astro";
+import AstroIcon from "../components/icons/AstroIcon.astro";
+import ExpressIcon from "../components/icons/ExpressIcon.astro";
+import JavaIcon from "../components/icons/JavaIcon.astro";
+import MySQLIcon from "../components/icons/MySQLIcon.astro";
+import PostgreIcon from "../components/icons/PostgreIcon.astro";
+import SQLiteIcon from "../components/icons/SQLiteIcon.astro";
+import TailwindIcon from "../components/icons/TailwindIcon.astro";
+import TSIcon from "../components/icons/TSIcon.astro";
+import MongoIcon from "../components/icons/MongoIcon.astro";
+
+const TECHS = [
+  {icon: ReactIcon},
+  {icon: TSIcon},
+  {icon: TailwindIcon},
+  {icon: NodeIcon},
+  {icon: ExpressIcon},
+  {icon: PythonIcon},
+  {icon: DjangoIcon},
+  {icon: AstroIcon},
+  {icon: JavaIcon},
+  {icon: PostgreIcon},
+  {icon: MySQLIcon},
+  {icon: MongoIcon},
+  {icon: SQLiteIcon},
+  {icon: GitHubIcon},
+];
+
 ---
 
 <Layout
@@ -16,29 +47,30 @@ import Projects from "../components/Projects.astro";
   description="Contrata a José Cerrato para crear tu applicación web. Dessarrollador Web. Especializado en el desarrollo de aplicaciones web fullstack."
 >
   <main class="px-4">
-    <SectionContainer class="pt-32 pb-32">
+    <SectionContainer id="top" class="pt-40 pb-32">
       <img
         class="rounded-full ml-6 w-40 h-40 mb-8 border-2 border-white"
         src="./photo.jpg"
         alt="Jose photo"
       />
-      <h1 class="text-white text-3xl lg:text-5xl font-bold flex pb-6 lg:pb-10 flex-row gap-x-4">
+      <h1
+        class="text-white text-3xl lg:text-5xl font-bold flex pb-6 lg:pb-10 flex-row gap-x-4"
+      >
         Hola! Soy José Cerrato <a
-          href="https://www.linkedin.com/in/josé-manuel-cerrato-66741a281"
+          href="https://www.linkedin.com/in/jos%C3%A9-manuel-cerrato/"
+          target="_blank"
           class="flex justify-center items-center"
           ><Badge>Disponible para trabajar</Badge></a
         >
       </h1>
-      <h2 class=" text-xl lg:text-2xl opacity-85 text-wrap max-w-[700px]">
+      <h2 class="text-xl lg:text-2xl opacity-85 text-wrap max-w-[700px]">
         Estudiante por egresar de la carrera <span class="text-yellow-200"
           >Ingeniería en Sistemas</span
         > en la UNAH. De Tegucigalpa, Honduras. Especializado en el desarrollo de
         aplicaciones web fullstack.
       </h2>
-      <nav class="flex gap-4 mt-8 flex-wrap">
-        <SocialTag
-          href="https://www.linkedin.com/in/josé-manuel-cerrato-66741a281"
-        >
+      <nav class="flex gap-5 mt-8 flex-wrap">
+        <SocialTag href="https://www.linkedin.com/in/jos%C3%A9-manuel-cerrato/">
           <LinkedInIcon class="size-4 md:size-6" />
           LinkedIn
         </SocialTag>
@@ -53,12 +85,81 @@ import Projects from "../components/Projects.astro";
       </nav>
     </SectionContainer>
     <SectionContainer id="projects">
-      <h2 class=" text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-        <CodeIcon class=" size-6"/>
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-8" />
         Proyectos
       </h2>
-      <Projects />
+      <Carousel />
     </SectionContainer>
-
+    <SectionContainer id="about" class="pt-32 pb-32">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <UserIcon class="size-8" />
+        Sobre Mí
+      </h2>
+      <p>
+        Me llamo José Manuel Cerrato, soy desarrollador full stack próximo a graduarme en Ingeniería en Sistemas
+        por la UNAH, con un <span class="text-yellow-100"
+          >enfoque principal en backend</span
+        > y <span class="text-yellow-100">experiencia sólida en frontend</span>. <span
+          >Proactivo</span
+        >
+        y con un <span class="text-yellow-100"
+          >fuerte deseo de aprendizaje continuo</span
+        >, he asumido <span class="text-yellow-100"
+          >roles de liderazgo como Scrum Master</span
+        > en proyectos universitarios, desarrollando <span
+          class="text-yellow-100">habilidades en gestión ágil</span
+        > y <span class="text-yellow-100"
+          >entrega de productos de alta calidad</span
+        >.
+        <br /><br />
+        <span class="text-yellow-100">¿Qué puedo ofrecer?</span>
+        Como desarrollador Full Stack, aporto una combinación de <span
+          class="text-yellow-100">habilidades técnicas</span
+        >, <span class="text-yellow-100">capacidad de liderazgo</span> y una <span
+          >mentalidad de mejora continua</span
+        >. Estoy listo para contribuir al éxito de tu equipo, entregando <span
+          class="text-yellow-100">soluciones innovadoras</span
+        > que impulsen tu proyecto al siguiente nivel. Si buscas a alguien <span
+          class="text-yellow-100">comprometido</span
+        >, con una <span class="text-yellow-100">sólida base técnica</span> y <span
+          class="text-yellow-100">capacidad para liderar y colaborar</span
+        >, estaré encantado de conectar contigo y explorar cómo podemos trabajar
+        juntos.
+      </p>
+      <div class="py-10">
+        <h2 class="text-xl font-semibold mb-6 flex gap-x-3 items-center">
+          Habilidades Técnicas
+        </h2>
+        <div class="flex gap-6 flex-wrap h-20">
+          {TECHS.map(tech => <tech.icon class="size-8 sm:size-9"/>)}
+        </div>
+      </div>
+    </SectionContainer>
   </main>
 </Layout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Select all sections with an ID
+    const sections = document.querySelectorAll<HTMLElement>("section[id]");
+
+    // Create an IntersectionObserver with TypeScript
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Update the URL hash when the section is intersecting
+            history.pushState(null, "", `#${entry.target.id}`);
+          }
+        });
+      },
+      { threshold: 0.7 } // Adjust the threshold according to your needs
+    );
+
+    // Observe each section
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  });
+</script>

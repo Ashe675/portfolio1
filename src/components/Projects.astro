@@ -1,13 +1,22 @@
 ---
 import ButtonAnchor from "./ButtonAnchor.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+import CSSIcon from "./icons/CSSIcon.astro";
 import ExpressIcon from "./icons/ExpressIcon.astro";
 import GitHubIcon from "./icons/GitHubIcon.astro";
+import MongoIcon from "./icons/MongoIcon.astro";
 import NodeIcon from "./icons/NodeIcon.astro";
 import PostgreIcon from "./icons/PostgreIcon.astro";
+import PrismaIcon from "./icons/PrismaIcon.astro";
 import ProjectIcon from "./icons/ProjectIcon.astro";
 import ReactIcon from "./icons/ReactIcon.astro";
+import ReactQueryIcon from "./icons/ReactQueryIcon.astro";
+import ReactRouterIcon from "./icons/ReactRouterIcon.astro";
+import SequelizeIcon from "./icons/SequelizeIcon.astro";
 import TSIcon from "./icons/TSIcon.astro";
 import TailwindIcon from "./icons/TailwindIcon.astro";
+import ZodIcon from "./icons/ZodIcon.astro";
+import ZustandIcon from "./icons/ZustandIcon.astro";
 
 const TAGS = {
   REACT: {
@@ -40,31 +49,205 @@ const TAGS = {
     class: " text-[#57A445]",
     icon: NodeIcon,
   },
+  CSS: {
+    name: "CSS",
+    class: "",
+    icon: CSSIcon,
+  },
+  REACT_ROUTER: {
+    name: "React Router",
+    class: "",
+    icon: ReactRouterIcon,
+  },
+  REACT_QUERY: {
+    name: "React Query",
+    class: "",
+    icon: ReactQueryIcon,
+  },
+  ZOD: {
+    name: "Zod",
+    class: "",
+    icon: ZodIcon,
+  },
+  ZUSTAND: {
+    name: "Zustand",
+    class: "",
+    icon: ZustandIcon,
+  },
+  SEQUELIZE: {
+    name: "Sequelize",
+    class: "",
+    icon: SequelizeIcon,
+  },
+  PRISMA: {
+    name: "Prisma",
+    class: "",
+    icon: PrismaIcon,
+  },
+  MONGO: {
+    name: "Mongo",
+    class: "",
+    icon: MongoIcon,
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "",
+    icon: AstroIcon,
+  },
 };
 
 const PROJECTS = [
   {
-    title: "Adminsitrador de Productos",
+    title: "Campus Universitario Virtual",
     description:
-      "Un proyecto fullstack utilizando el stack PERN donde utilizo la librería react-router-dom para manejar multiples páginas, axios para el fetching de datos y valibot para validar los tipos, el backend es una REST API donde utilicé la librería jest para realizar el testing, sequelize como ORM y swagger para documentar la API.",
-    link: "https://product-management-frontend-two.vercel.app/",
-    github: "https://github.com/Ashe675/rest_api_ts_products_frontend.git",
-    image: "/projects/productManagement.webp",
+      "Proyecto Full Stack utilizando el stack PERN para un sistema de registro universitario robusto y escalable. En el backend, utilicé Prisma como ORM para manejar la base de datos, y añadí funcionalidades clave como el envío de correos electrónicos, además de un sistema de chat en tiempo real con WebSockets que permite el intercambio de archivos y la subida de videos. El frontend, construido con React y TypeScript, incluye una navegación fluida con React Router y la gestión del estado global con Zustand, lo que asegura una experiencia de usuario dinámica y eficiente. Este proyecto demuestra habilidades avanzadas en el desarrollo de aplicaciones complejas y escalables, enfocadas en la experiencia del usuario y la gestión eficiente de datos.",
+    link: "https://u-college-frontend.vercel.app/admisiones",
+    github: "https://github.com/Ashe675/UCollege-Frontend",
+    github2: "https://github.com/Ashe675/UCollege-Backend",
+    image: "/projects/ucollege.webp",
     tags: [
       TAGS.REACT,
+      TAGS.REACT_ROUTER,
+      TAGS.REACT_QUERY,
       TAGS.TS,
       TAGS.TAILWIND,
       TAGS.PSTGR,
+      TAGS.PRISMA,
       TAGS.EXPRESS,
       TAGS.NODE,
     ],
+  },
+  {
+    title: "Administrador de Proyectos",
+    description:
+      "Un proyecto Full Stack desarrollado con el stack MERN (MongoDB, Express, React, Node.js), inspirado en Trello, que permite administrar proyectos, tareas y miembros con una arquitectura sólida y eficiente. En el frontend, empleé React Router para la navegación entre páginas, Axios para las solicitudes de datos, Zod para la validación de tipos y Zustand para el manejo del estado global. En el backend, desarrollé una API REST robusta con Express, utilizando Mongoose como ORM para la gestión de la base de datos en MongoDB. Además, implementé funcionalidades clave como envío de correos electrónicos, autenticación y autorización de usuarios, y recuperación de contraseñas. USUARIO PRUEBA: jose2@g.co, PASSWORD: jose12345",
+    link: "https://up-task-frontend-eta.vercel.app/",
+    github: "https://github.com/Ashe675/UpTask_Frontend",
+    github2: "https://github.com/Ashe675/UCollege-Backend",
+    image: "/projects/upTask.webp",
+    tags: [
+      TAGS.REACT,
+      TAGS.REACT_ROUTER,
+      TAGS.TS,
+      TAGS.TAILWIND,
+      TAGS.ZUSTAND,
+      TAGS.ZOD,
+      TAGS.EXPRESS,
+      TAGS.NODE,
+      TAGS.MONGO,
+    ],
+  },
+  {
+    title: "Administrador de Productos",
+    description:
+      "Un proyecto Full Stack utilizando el stack PERN (PostgreSQL, Express, React, Node.js), donde implementé una arquitectura completa y robusta. En el frontend, empleé React Router para gestionar la navegación entre múltiples páginas, axios para realizar solicitudes de datos y valibot para validar tipos de manera eficiente. Para el backend, desarrollé una API REST utilizando Express, y aseguré la calidad del código con pruebas automatizadas mediante Jest. Utilicé Sequelize como ORM para la gestión de la base de datos PostgreSQL y Swagger para proporcionar documentación interactiva y clara de la API.",
+    link: "https://product-management-frontend-two.vercel.app/",
+    github: "https://github.com/Ashe675/rest_api_ts_products_frontend.git",
+    github2: "https://github.com/Ashe675/rest_api_ts_products_backend",
+    image: "/projects/productManagement.webp",
+    tags: [
+      TAGS.REACT,
+      TAGS.REACT_ROUTER,
+      TAGS.TS,
+      TAGS.TAILWIND,
+      TAGS.PSTGR,
+      TAGS.SEQUELIZE,
+      TAGS.EXPRESS,
+      TAGS.NODE,
+    ],
+  },
+  {
+    title: "Sitio Web Administrador de Barbería",
+    description:
+      "Sitio web desarrollado con AstroJS, TypeScript y TailwindCSS, creado para promocionar la idea de una app web donde le permite a los dueños de barberías administrar su sucursal o sucursales.",
+    link: "https://barbershopms.pages.dev/",
+    github: "https://github.com/Ashe675/BarberShopMS",
+    image: "/projects/bs.webp",
+    tags: [
+      TAGS.ASTRO,
+      TAGS.TS,
+      TAGS.TAILWIND
+    ],
+  },
+  {
+    title: "Buscador de Bebidas",
+    description:
+      "Una aplicación frontend desarrollada con ReactJS, TypeScript y TailwindCSS, creada para facilitar la búsqueda de recetas de bebidas. La app permite buscar bebidas y muestra un listado de coincidencias, además de ofrecer instrucciones detalladas para la preparación de cada una. Los usuarios también pueden agregar sus recetas favoritas para un acceso rápido. El proyecto utiliza React Router para la navegación entre múltiples páginas, Axios para la obtención de datos de una API externa, y Zod para la validación de tipos. Zustand se emplea para gestionar el estado global, garantizando una experiencia de usuario fluida y eficiente.",
+    link: "https://drink-recipes-reactrouter.netlify.app/",
+    github: "https://github.com/Ashe675/Drink-Recipes",
+    image: "/projects/Recipe.webp",
+    tags: [
+      TAGS.REACT,
+      TAGS.REACT_ROUTER,
+      TAGS.TS,
+      TAGS.TAILWIND,
+      TAGS.ZUSTAND,
+      TAGS.ZOD,
+    ],
+  },
+  {
+    title: "Planificador de Gastos",
+    description:
+      "Una aplicación frontend desarrollada con ReactJS, TypeScript y TailwindCSS, diseñada para la planificación y seguimiento de gastos. La aplicación permite establecer un presupuesto, agregar, eliminar y actualizar gastos, y filtrarlos por categoría. Los gastos se reflejan visualmente en el presupuesto, proporcionando una visión clara y organizada de las finanzas. El proyecto emplea custom hooks, useReducer y context API para un manejo eficiente del estado global, asegurando una experiencia de usuario intuitiva y dinámica.",
+    link: "https://budgettracker-ts-contextapi.netlify.app/",
+    github: "https://github.com/Ashe675/Budget-Tracker",
+    image: "/projects/budget.webp",
+    tags: [TAGS.REACT, TAGS.TS, TAGS.TAILWIND],
+  },
+  {
+    title: "Administrador de Pacientes (Veterinaria)",
+    description:
+      "Una aplicación frontend desarrollada con ReactJS, TypeScript y TailwindCSS, creada para gestionar el seguimiento de pacientes en una veterinaria. Permite agregar, editar y eliminar registros de pacientes de manera eficiente. El proyecto utiliza React Hook Form para un manejo optimizado de formularios y Zustand para gestionar el estado global, asegurando una experiencia de usuario fluida y organizada.",
+    link: "https://patient-manager-zustand.netlify.app/",
+    github: "https://github.com/Ashe675/Patient-Manager",
+    image: "/projects/vet.webp",
+    tags: [TAGS.REACT, TAGS.TS, TAGS.TAILWIND, TAGS.ZUSTAND],
+  },
+  {
+    title: "Cotizador de Criptomonedas",
+    description:
+      "Una aplicación frontend desarrollada con ReactJS, TypeScript y CSS, diseñada para consultar el precio de las criptomonedas en el mercado global. Utiliza Axios para consumir una API externa, Zod para la validación de tipos y Zustand para el manejo del estado global. Los usuarios pueden seleccionar el país para convertir el valor de las criptomonedas a la moneda local, proporcionando una experiencia de usuario dinámica y adaptativa.",
+    link: "https://cryptocurrency-quoter-zustand-zod.netlify.app/",
+    github: "https://github.com/Ashe675/cryptocurrency-quoter",
+    image: "/projects/crypto.webp",
+    tags: [TAGS.REACT, TAGS.TS, TAGS.CSS, TAGS.ZOD, TAGS.ZUSTAND],
+  },
+  {
+    title: "Buscador de Clima",
+    description:
+      "Una aplicación frontend desarrollada con ReactJS, TypeScript y CSS Modules, diseñada para consultar el clima actual en diversas ciudades alrededor del mundo. Este proyecto utiliza una API externa para obtener datos meteorológicos, emplea Axios para el fetching de datos y Zod para la validación de tipos. Además, la lógica de datos y estado se gestiona mediante custom hooks, ofreciendo una experiencia de usuario modular y eficiente.",
+    link: "https://relaxed-melba-3dea47.netlify.app/",
+    github: "https://github.com/Ashe675/Weather_Finder",
+    image: "/projects/wear.webp",
+    tags: [TAGS.REACT, TAGS.TS, TAGS.CSS, TAGS.ZOD],
+  },
+  {
+    title: "Contador de Calorías",
+    description:
+      "Una aplicación frontend desarrollada con ReactJS, TypeScript y TailwindCSS, diseñada para llevar un control detallado de las calorías consumidas y quemadas. Utilizo Context API para gestionar los estados de manera centralizada, facilitando una experiencia de usuario fluida y eficiente en el seguimiento de metas nutricionales y de ejercicio.",
+    link: "https://calorie-tracker-contextapi-ts.netlify.app/",
+    github: "https://github.com/Ashe675/Calorie-Tracker",
+    image: "/projects/calorieTracker.webp",
+    tags: [TAGS.REACT, TAGS.TS, TAGS.TAILWIND],
+  },
+  {
+    title: "Calculadora de Propinas",
+    description:
+      "Una aplicación frontend desarrollada con ReactJS, TypeScript y TailwindCSS, diseñada para calcular propinas de manera intuitiva. Utilizo useReducer para una gestión eficiente del estado y permito a los usuarios calcular el total de su consumo basado en un menú interactivo. La aplicación facilita la adición de un porcentaje de propina en función del consumo, proporcionando un desglose claro del total a pagar y el monto total de la propina.",
+    link: "https://admirable-marshmallow-1f5c3e.netlify.app/",
+    github: "https://github.com/Ashe675/tip_calculator",
+    image: "/projects/tipCalculator.webp",
+    tags: [TAGS.REACT, TAGS.TS, TAGS.TAILWIND],
   },
 ];
 ---
 
 {
   PROJECTS.map((project) => (
-    <article class=" bg-black/50 p-8 rounded-md shadow-md">
+    <article
+      class=" bg-black/50 p-8 rounded-md shadow-mdhidden duration-700 ease-in-out flex flex-col"
+      data-carousel-item
+    >
       <h3 class=" text-2xl font-semibold text-yellow-200 mb-2">
         {project.title}
       </h3>
@@ -73,21 +256,30 @@ const PROJECTS = [
         alt={`Captura de pantalla del proyecto ${project.title}`}
         class=" rounded shadow-white/10 mb-3"
       />
-      <ul class=" flex gap-x-2 flex-row flex-wrap justify-evenly py-3">
+      <ul class=" flex gap-2 gap-x-7 flex-row flex-wrap justify-center py-3">
         {project.tags.map((tag) => (
           <li>
             <span class={`rounded-full`}>
-              <tag.icon class="size-10" />
+              <tag.icon class="size-8 sm:size-10" />
             </span>
           </li>
         ))}
       </ul>
-      <p class=" text-lg mt-2 mb-4 text-pretty">{project.description}</p>
-      <div class=" flex flex-row-reverse">
-        <ButtonAnchor tag="GitHub" url={project.github} ><GitHubIcon class="size-4 md:size-6" /></ButtonAnchor>
+      <p class=" text-sm sm:text-lg mt-2 mb-4 text-pretty max-sm:hidden">
+        {project.description}
+      </p>
+      <div class=" flex flex-wrap justify-end gap-x-3 items-end h-full pb-3">
         <ButtonAnchor tag="Preview" url={project.link}>
-          <ProjectIcon class="size-4 md:size-6"/>
+          <ProjectIcon class="size-4 md:size-6" />
         </ButtonAnchor>
+        <ButtonAnchor tag="Frontend" url={project.github}>
+          <GitHubIcon class="size-4 md:size-6" />
+        </ButtonAnchor>
+        {project.github2 && (
+          <ButtonAnchor tag="Backend" url={project.github2}>
+            <GitHubIcon class="size-4 md:size-6" />
+          </ButtonAnchor>
+        )}
       </div>
     </article>
   ))
