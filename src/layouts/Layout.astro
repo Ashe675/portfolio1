@@ -24,7 +24,7 @@ const { description, title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="text-white min-h-screen h-full">
     <div class="fixed left-0 top-0 -z-10 h-full w-full">
       <div class="relative h-full w-full bg-slate-950">
         <div
@@ -48,7 +48,7 @@ const { description, title } = Astro.props;
 </html>
 <style is:global>
   :root {
-    color-scheme: light dark;
+    color-scheme: dark;
   }
   html {
     font-family: "Onest Variable", system-ui, sans-serif;
