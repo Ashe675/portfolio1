@@ -5,6 +5,7 @@ import CSSIcon from "./icons/CSSIcon.astro";
 import ExpressIcon from "./icons/ExpressIcon.astro";
 import GitHubIcon from "./icons/GitHubIcon.astro";
 import MongoIcon from "./icons/MongoIcon.astro";
+import NextIcon from "./icons/NextIcon.astro";
 import NodeIcon from "./icons/NodeIcon.astro";
 import PostgreIcon from "./icons/PostgreIcon.astro";
 import PrismaIcon from "./icons/PrismaIcon.astro";
@@ -23,6 +24,11 @@ const TAGS = {
     name: "ReactJS",
     class: " text-[#00D8FF]",
     icon: ReactIcon,
+  },
+  NEXT: {
+    name: "NextJS",
+    class: " text-[#fff]",
+    icon: NextIcon,
   },
   TAILWIND: {
     name: "TailwindCSS",
@@ -119,9 +125,40 @@ const PROJECTS = [
     ],
   },
   {
+    title: "Ecommerce",
+    description: `Aplicación fullstack clon del ecommerce de Tesla, desarrollada con Next.js, TypeScript y TailwindCSS. Los clientes pueden añadir productos al carrito, completar el checkout, y realizar pagos seguros mediante PayPal o tarjeta de crédito. La plataforma incluye un módulo de administración donde el admin, con autenticación de usuario, gestiona productos, actualiza stock, imágenes y roles de usuarios.La aplicación utiliza Prisma como ORM, server actions de Next.js para comunicación fluida entre frontend y backend, validación robusta con Zod, estado global con Zustand, y paginación optimizada, garantizando una experiencia rápida y segura.`,
+    link: "https://ecommerce-teslo-shop-jc.vercel.app/",
+    github: "https://github.com/Ashe675/teslo-shop",
+    image: "/projects/tesloshop.webp",
+    tags: [
+      TAGS.NEXT,
+      TAGS.TS,
+      TAGS.TAILWIND,
+      TAGS.ZUSTAND,
+      TAGS.ZOD,
+      TAGS.PSTGR,
+      TAGS.PRISMA,
+    ],
+  },
+  {
+    title: "Quiosco de comida",
+    description: `Aplicación fullstack desarrollada con Next.js, TypeScript y TailwindCSS, que gestiona un kiosco de comida interactivo. Los clientes pueden hacer pedidos, ver el total en tiempo real, y verificar cuándo están listos. El módulo de cocina permite actualizar el estado de los pedidos, y el administrador puede agregar productos e imágenes, almacenadas en la nube con Cloudinary. La aplicación utiliza Prisma como ORM, server actions y APIs de Next.js para comunicación entre frontend y backend. Además, implementa validación de tipos con Zod, estado global con Zustand, y paginación y optimización de solicitudes con SWR, asegurando una experiencia rápida y robusta.`,
+    link: "https://quisco-next-nine.vercel.app/order/cafe",
+    github: "https://github.com/Ashe675/QuiscoNext",
+    image: "/projects/quiosco.webp",
+    tags: [
+      TAGS.NEXT,
+      TAGS.TS,
+      TAGS.TAILWIND,
+      TAGS.ZUSTAND,
+      TAGS.ZOD,
+      TAGS.PSTGR,
+      TAGS.PRISMA,
+    ],
+  },
+  {
     title: "Administrador de Proyectos",
-    description:
-      `Un proyecto Full Stack desarrollado con el stack MERN (MongoDB, Express, React, Node.js), inspirado en Trello, que permite administrar proyectos, tareas y miembros con una arquitectura sólida y eficiente. En el frontend, empleé React Router para la navegación entre páginas, Axios para las solicitudes de datos, Zod para la validación de tipos y Zustand para el manejo del estado global. En el backend, desarrollé una API REST robusta con Express, utilizando Mongoose como ORM para la gestión de la base de datos en MongoDB. Además, implementé funcionalidades clave como envío de correos electrónicos, autenticación y autorización de usuarios, y recuperación de contraseñas. 
+    description: `Un proyecto Full Stack desarrollado con el stack MERN (MongoDB, Express, React, Node.js), inspirado en Trello, que permite administrar proyectos, tareas y miembros con una arquitectura sólida y eficiente. En el frontend, empleé React Router para la navegación entre páginas, Axios para las solicitudes de datos, Zod para la validación de tipos y Zustand para el manejo del estado global. En el backend, desarrollé una API REST robusta con Express, utilizando Mongoose como ORM para la gestión de la base de datos en MongoDB. Además, implementé funcionalidades clave como envío de correos electrónicos, autenticación y autorización de usuarios, y recuperación de contraseñas. 
       USUARIO PRUEBA: jose2@g.co, PASSWORD: jose12345`,
     link: "https://up-task-frontend-eta.vercel.app/",
     github: "https://github.com/Ashe675/UpTask_Frontend",
@@ -166,11 +203,7 @@ const PROJECTS = [
     link: "https://barbershopms.pages.dev/",
     github: "https://github.com/Ashe675/BarberShopMS",
     image: "/projects/bs.webp",
-    tags: [
-      TAGS.ASTRO,
-      TAGS.TS,
-      TAGS.TAILWIND
-    ],
+    tags: [TAGS.ASTRO, TAGS.TS, TAGS.TAILWIND],
   },
   {
     title: "Buscador de Bebidas",

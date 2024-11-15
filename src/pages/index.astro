@@ -22,11 +22,17 @@ import SQLiteIcon from "../components/icons/SQLiteIcon.astro";
 import TailwindIcon from "../components/icons/TailwindIcon.astro";
 import TSIcon from "../components/icons/TSIcon.astro";
 import MongoIcon from "../components/icons/MongoIcon.astro";
-import FlutterIcon from "../components/icons/FlutterIcon.astro";
-import Kotlin from "../components/icons/Kotlin.astro";
+import NextIcon from "../components/icons/NextIcon.astro";
+import HTMLIcon from "../components/icons/HTMLIcon.astro";
+import CSSIcon from "../components/icons/CSSIcon.astro";
+import JSIcon from "../components/icons/JSIcon.astro";
 
 const TECHS = [
+  {icon: HTMLIcon},
+  {icon: CSSIcon},
+  {icon: JSIcon},
   {icon: ReactIcon},
+  {icon: NextIcon},
   {icon: TSIcon},
   {icon: TailwindIcon},
   {icon: NodeIcon},
@@ -34,8 +40,6 @@ const TECHS = [
   {icon: PythonIcon},
   {icon: DjangoIcon},
   {icon: AstroIcon},
-  {icon: FlutterIcon},
-  {icon: Kotlin},
   {icon: JavaIcon},
   {icon: PostgreIcon},
   {icon: MySQLIcon},
@@ -136,7 +140,7 @@ const TECHS = [
           Habilidades Técnicas
         </h2>
         <div class="flex gap-6 flex-wrap h-20">
-          {TECHS.map(tech => <tech.icon class="size-8 sm:size-9"/>)}
+          {TECHS.map(tech => <tech.icon class="size-8 sm:size-9 "/>)}
         </div>
       </div>
     </SectionContainer>
